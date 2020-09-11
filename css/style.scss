@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+   width: 100%;
+}
+
+
+@mixin center-grid {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+body {
+    @include center-grid();
+    #Panda-header {
+        @include center-grid();
+        grid-template-columns: 2fr 3fr 2fr;
+        min-height: 10vh;
+    }
+    #Panda-content{
+        @include center-grid();
+        grid-template-columns: 1fr 1fr;
+        min-height: 80vh;
+    }
+    #Panda-footer {
+        @include center-grid();
+        min-height: 10vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+.header-background {
+    background-color: lightcoral;
+}
